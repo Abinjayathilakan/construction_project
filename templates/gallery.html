@@ -1,0 +1,115 @@
+{% include "navbar3.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+
+  <style type="text/css">
+    * {
+      margin: 0px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 55px;
+    }
+
+    header {
+      font-family: 'Dokdo', cursive;
+      font-size: 30px;
+      padding: 20px;
+    }
+
+    main {
+      margin-left: 120px;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .box-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: calc(25% - 30px);
+      padding: 7px;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    img:hover {
+      transform: scale(1.3, 1.3);
+      transition: .3s transform;
+    }
+
+    /* Media Queries */
+    @media (max-width: 1024px) {
+      .box {
+        width: calc(33.33% - 30px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Civil Works</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://plus.unsplash.com/premium_photo-1681823803918-c449fa3e1f2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2l2aWwlMjB3b3JrfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1563166423-482a8c14b2d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l2aWwlMjB3b3JrfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2l2aWwlMjB3b3JrfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1487491424367-7571f9afbb30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80">
+      </div>
+    </div>
+  </header>
+
+  <header>
+    <h1>Road Works</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1504930268766-d71549a36ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHdvcmt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1593436878396-e943a3cac98f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cm9hZCUyMHdvcmt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1609302521278-c4782b7fbb64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm9hZCUyMHdvcmt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1577896021507-78957e4b77d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJvYWQlMjB3b3JrfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+      </div>
+    </div>
+  </header>
+</body>
+</html>

@@ -1,132 +1,204 @@
+{% load static %}
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Responsive Navbar | CodingNepal</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            text-decoration: none;
-            list-style: none;
-            box-sizing: border-box;
-          }
-          body{
-            font-family: montserrat;
-          }
-          nav{
-            background: #0082e6;
-            height: 80px;
-            width: 100%;
-          }
-          label.logo{
-            color: white;
-            font-size: 35px;
-            line-height: 80px;
-            padding: 0 100px;
-            font-weight: bold;
-          }
-          nav ul{
-            float: right;
-            margin-right: 20px;
-          }
-          nav ul li{
-            display: inline-block;
-            line-height: 80px;
-            margin: 0 5px;
-          }
-          nav ul li a{
-            color: white;
-            font-size: 17px;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
-          }
-          a.active,a:hover{
-            background: #1b9bff;
-            transition: .5s;
-          }
-          .checkbtn{
-            font-size: 30px;
-            color: white;
-            float: right;
-            line-height: 80px;
-            margin-right: 40px;
-            cursor: pointer;
-            display: none;
-          }
-          #check{
-            display: none;
-          }
-          @media (max-width: 952px){
-            label.logo{
-              font-size: 30px;
-              padding-left: 50px;
-            }
-            nav ul li a{
-              font-size: 16px;
-            }
-          }
-          @media (max-width: 858px){
-            .checkbtn{
-              display: block;
-            }
-            ul{
-              position: fixed;
-              width: 100%;
-              height: 100vh;
-              background: #2c3e50;
-              top: 80px;
-              left: -100%;
-              text-align: center;
-              transition: all .5s;
-            }
-            nav ul li{
-              display: block;
-              margin: 50px 0;
-              line-height: 30px;
-            }
-            nav ul li a{
-              font-size: 20px;
-            }
-            a:hover,a.active{
-              background: none;
-              color: #0082e6;
-            }
-            #check:checked ~ ul{
-              left: 0;
-            }
-          }
-          section{
-            background: url(bg1.jpg) no-repeat;
-            background-size: cover;
-            height: calc(100vh - 80px);
-          }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">Crown</label>
-      <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">Experties</a></li>
-        <li><a href="#">Product Brand</a></li>
-        <li><a href="#">Buy products</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Project Updates</a></li>
-        <li><a href="#">Career</a></li>
-        <li><a href="#">Contact</a></li>
-        
-      </ul>
-    </nav>
-    <section></section>
-  </body>
-</html>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+			list-style: none;
+			font-family: 'Poppins',sans-serif;
+		}
+		img {
+			width: 100%;
+		}
+		header {
+			height: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 50px;
+			background: #0b2239;
+		}
+		header .header-left {
+			display: flex;
+			align-items: center;
+		}
+		header .header-left .logo {
+			width: 140px;
+		}
+		header .header-left nav {
+			margin-left: 50px;
+		}
+		header .header-left nav ul {
+			display: flex;
+		}
+		nav ul li a {
+			display: block;
+			color: #cfd9e0;
+			font-size: 18px;
+			padding: 5px 10px;
+			transition: 0.2s;
+		}
+		nav ul li a:hover,
+		nav ul li a.active {
+			color: #fff;
+		}
+		nav .login-signup {
+			display: none;
+		}
+		header .header-right {
+			display: flex;
+			align-items: center;
+		}
+		header .login-signup {
+			color: #cfd9e0;
+			font-weight: bold;
+		}
+		header .login-signup a {
+			display: inline-block;
+			color: #0b2239;
+			background: #4ad295;
+			padding: 5px 12px;
+			border-radius: 5px;
+		}
+		header .header-right .hamburger {
+			margin-left: 20px;
+			cursor: pointer;
+			display: none;
+		}
+		header .header-right .hamburger div {
+			width: 30px;
+			height: 2px;
+			margin: 6px 0;
+			background: #fff;
+		}
+		@media only screen and (max-width: 1000px) {
+			header {
+				padding: 0 20px;
+			}
+			header .header-right .hamburger {
+				display: block;
+			}
+			header .header-left nav {
+				margin: 0;
+				position: absolute;
+				top: -100%;
+				left: 0;
+				width: 100%;
+				height: fit-content;
+				background-color: #0b2239;
+				padding: 30px;
+				transition: 0.3s;
+				text-align: center;
+				z-index: -1;
+			}
+			header .header-left nav.active {
+				top: 70px;
+			}
+			header .header-left nav ul {
+				display: block;
+			}
+		}
+		@media only screen and (max-width: 500px) {
+			nav .login-signup {
+				display: block;
+				margin-top: 20px;
+			}
+			header .header-right .login-signup {
+				display: none;
+			}
+		}
+		
+		.navbar ul.nav{
+			margin-right: 15%;
+		}
+		.navbar ul.nav li.active,
+		.navbar ul.nav li:hover{
+			background:rgba(255, 255, 255, 0.5);
+			color: #000;
+		
+		}
+		.navbar ul.nav li a{
+			color: #fff;
+			font-size: 1em;
+			font-weight: 500;
+		}
+		.navbar ul.nav li.active a,
+		.navbar ul.nav li:hover a{
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="https://i.pinimg.com/564x/1d/74/3b/1d743bb41490128be1b2a0edc8a3e000.jpg" style="width: 70px; border-radius: 50%;"  alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'homepage' %}" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'experties' %}">Experties</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'productbrand' %}">Product Brand</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'buyproducts' %}">Buy Product</a>
+                    </li>
+					<li>
+                        <a href="{% url 'gallery' %}">Gallery</a>
+                    </li>
+
+                    <li><a href="">Project Updates</a>
+					<ul>
+						<li><a href="">Iconic Projects</a></li>
+						<li><a href="">Ongoing Projects</a></li>
+					</ul>
+					</li>
+
+                    <li>
+                        <a href="{% url 'career' %}">Career</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+                {% comment %} <div class="login-signup">
+                    <a href="">Login</a> or <a href="">Signup</a>
+                </div> {% endcomment %}
+            </nav>
+        </div>
+        <div class="header-right">
+            {% comment %} <div class="login-signup">
+                <a href="">Login</a> or <a href="">Signup</a>
+            </div> {% endcomment %}
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>  

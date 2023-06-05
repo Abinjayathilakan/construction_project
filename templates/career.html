@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .jobs-list-container {
+            max-width: 900px;
+            margin: 20px auto;
+            font-family: "Rubik", sans-serif;
+          }
+          
+          .jobs-list-container h2 {
+            font-size: 30px;
+            border-left: 4px solid #023047;
+            padding-left: 20px;
+          }
+          
+          .jobs-list-container .jobs {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+          }
+          
+          .jobs-list-container .jobs img {
+            width: 60px;
+          }
+          
+          .jobs-list-container .job {
+            box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+            padding: 24px;
+            border-radius: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: all 400ms ease;
+          }
+          
+          .jobs-list-container .job:hover {
+            transform: scale(1.03);
+          }
+          
+          .jobs-list-container .open-positions {
+            position: absolute;
+            top: 40px;
+            right: 24px;
+            color: #e63946;
+          }
+          
+          .jobs-list-container .job-title {
+            font-size: 20px;
+            padding: 10px 0;
+            margin: 0;
+            color: #023047;
+          }
+          
+          .jobs-list-container .details {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.8;
+            flex: 1;
+          }
+          
+          .jobs-list-container .details-btn {
+            text-decoration: none;
+            border: 1px solid #023047;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 400ms ease;
+          }
+          
+          .jobs-list-container .details-btn:hover {
+            background: #023047;
+            color: #fff;
+          }
+          
+          .jobs-list-container .job-search {
+            width: 100%;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-family: "Rubik", sans-serif;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-bottom: 20px;
+          }
+          
+          @media (max-width: 940px) {
+            .jobs-list-container .jobs {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+          
+          @media (max-width: 640px) {
+            .jobs-list-container .jobs {
+              grid-template-columns: 1fr;
+              max-width: 400px;
+              margin: 0 auto;
+            }
+          }
+  
+    </style>
+  </head>
+  <body>
+    <div class="jobs-list-container">
+      <h2>5 Jobs</h2>
+
+      <input class="job-search" type="text" placeholder="Search here..." />
+
+      <div class="jobs"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        const jobs = [
+  {
+    title: "Senior Engineer",
+    image: "data:image/png;base64,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",
+    details:
+      "Responsible for designing, developing and maintaining software systems and applications.",
+    openPositions: "2",
+    link: "#",
+  },
+
+  {
+    title: "Civil Design Engineer",
+    image: "data:image/png;base64,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",
+    details:
+      "Responsible for collecting, analyzing and interpreting large data sets to help organizations make better decisions.",
+    openPositions: "3",
+    link: "#",
+  },
+
+  {
+    title: "Manager",
+    image: "data:image/png;base64,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",
+    details:
+      "Responsible for planning, executing and closing projects on time and within budget.",
+    openPositions: "1",
+    link: "#",
+  },
+
+  {
+    title: "Ac Engineer",
+    image: "data:image/png;base64,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",
+    details:
+      "Responsible for managing the entire product life cycle, from ideation to launch and post-launch maintenance.",
+    openPositions: "1",
+    link: "#",
+  },
+
+  {
+    title: "Surveyor",
+    image: "data:image/png;base64,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",
+    details:
+      "Responsible for reaching out to potential customers and closing sales deals.",
+    openPositions: "4",
+    link: "#",
+  },
+
+  {
+    title: "Survey Manager",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuoLUQT5GZiLMU5m-iklPxbgwm4vlzMnNucgEY_m0HhvF6eHimIHuKjff5LkNzBseT68&usqp=CAU",
+    details:
+      "Responsible for creating and executing marketing strategies to promote a company or product.",
+    openPositions: "1",
+    link: "#",
+  },
+];
+
+const jobsHeading = document.querySelector(".jobs-list-container h2");
+const jobsContainer = document.querySelector(".jobs-list-container .jobs");
+const jobSearch = document.querySelector(".jobs-list-container .job-search");
+
+let searchTerm = "";
+
+if (jobs.length == 1) {
+  jobsHeading.innerHTML = `${jobs.length} Job`;
+} else {
+  jobsHeading.innerHTML = `${jobs.length} Jobs`;
+}
+
+const createJobListingCards = () => {
+  jobsContainer.innerHTML = "";
+
+  jobs.forEach((job) => {
+    if (job.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      let jobCard = document.createElement("div");
+      jobCard.classList.add("job");
+
+      let image = document.createElement("img");
+      image.src = job.image;
+
+      let title = document.createElement("h3");
+      title.innerHTML = job.title;
+      title.classList.add("job-title");
+
+      let details = document.createElement("div");
+      details.innerHTML = job.details;
+      details.classList.add("details");
+
+      let detailsBtn = document.createElement("a");
+      detailsBtn.href = job.link;
+      detailsBtn.innerHTML = "More Details";
+      detailsBtn.classList.add("details-btn");
+
+      let openPositions = document.createElement("span");
+      openPositions.classList.add("open-positions");
+
+      if (job.openPositions == 1) {
+        openPositions.innerHTML = `${job.openPositions} open position`;
+      } else {
+        openPositions.innerHTML = `${job.openPositions} open positions`;
+      }
+
+      jobCard.appendChild(image);
+      jobCard.appendChild(title);
+      jobCard.appendChild(details);
+      jobCard.appendChild(detailsBtn);
+      jobCard.appendChild(openPositions);
+
+      jobsContainer.appendChild(jobCard);
+    }
+  });
+};
+
+createJobListingCards();
+
+jobSearch.addEventListener("input", (e) => {
+  searchTerm = e.target.value;
+
+  createJobListingCards();
+});
+    </script>
+  </body>
+</html>
