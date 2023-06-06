@@ -133,6 +133,7 @@
 </head>
 
 <body>
+  {% include "navbar3.html" %}
 
   <h1>Our Iconic Projects</h1>
   <div class="container">
@@ -191,7 +192,7 @@
       </div>
     </div>
 
-    <div class="gallery-container h-2">
+    {% comment %} <div class="gallery-container h-2">
       <div class="gallery-item">
         <div class="image">
           <img src="https://source.unsplash.com/1600x900/?art" alt="art">
@@ -207,9 +208,10 @@
         </div>
         <div class="text">Cars</div>
       </div>
-    </div>
+    </div> {% endcomment %}
 
   </div>
+  
 </body>
 
 </html>

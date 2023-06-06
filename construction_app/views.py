@@ -2,16 +2,16 @@ from django.shortcuts import render
 
 # Create your views here.
 def navbar(request):
-    return render(request,'navbar3.html')
+    return render(request,'navbar.html')
 
 def homepage(request):
-    return render(request,'homepage.html')
+    return render(request,'homepage2.html')
 
 def experties(request):
     return render(request,'experties.html')
 
 def productbrand(request):
-    return render(request,'productbrand.html')
+    return render(request,'productbrand2.html')
 
 def footer(request):
     return render(request,'footer.html')
@@ -33,3 +33,15 @@ def projectupdates(request):
 
 def ongoingprojects(request):
     return render(request,'ongoingprojects.html')
+
+def navbar2(request):
+    return render(request,'navbar2.html')
+
+def aboutus(request):
+    return render(request,'aboutus.html')
+
+def whychooseus(request):
+    return render(request,'whychooseus.html')
+
+# def navbar2(request):
+#     return render(request,'navbar2.html')
