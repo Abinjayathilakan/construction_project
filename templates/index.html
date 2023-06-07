@@ -1,190 +1,74 @@
 <!DOCTYPE html>
-<!-- Coding by CodingLab | www.codinglabweb.com  -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Image Slider</title>
+<head>
+  <title>Dropdown Menu Responsive</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-.main {
-  height: 100vh;
-  width: 100%;
-}
-.wrapper,
-.slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.slide {
-  overflow: hidden;
-}
-.slide::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
-.slide .image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.slide .image-data {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-  z-index: 100;
-}
-.image-data span.text {
-  font-size: 14px;
-  font-weight: 400;
-  color: #fff;
-}
-.image-data h2 {
-  font-size: 45px;
-  font-weight: 600;
-  color: #fff;
-}
-a.button {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 25px;
-  color: #333;
-  background: #fff;
-  text-decoration: none;
-  margin-top: 25px;
-  transition: all 0.3s ease;
-}
-a.button:hover {
-  color: #fff;
-  background-color: #c87e4f;
-}
-
-/* swiper button css */
-.nav-btn {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-}
-.nav-btn:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-.swiper-button-next {
-  right: 50px;
-}
-.swiper-button-prev {
-  left: 50px;
-}
-.nav-btn::before,
-.nav-btn::after {
-  font-size: 25px;
-  color: #fff;
-}
-.swiper-pagination-bullet {
-  opacity: 1;
-  height: 12px;
-  width: 12px;
-  background-color: #fff;
-  visibility: hidden;
-}
-.swiper-pagination-bullet-active {
-  border: 2px solid #fff;
-  background-color: #c87e4f;
-}
-
-@media screen and (max-width: 768px) {
-  .nav-btn {
-    visibility: hidden;
-  }
-  .swiper-pagination-bullet {
-    visibility: visible;
-  }
-}
-</style>
-  </head>
-  <body>
-    <section class="main swiper mySwiper">
-      <div class="wrapper swiper-wrapper">
-        <div class="slide swiper-slide">
-          <img src="http://unitedconstruction.com/wp-content/uploads/2019/06/1920-x-375-Sofidel.jpg" alt="" class="image" />
-          <div class="image-data">
-            <span class="text">Enjoy the finest coffee drinks.</span>
-            <h2>
-              Enjoy Our Exclusive <br />
-              Coffee and Cocktails
-            </h2>
-            <a href="#" class="button">About Us</a>
-          </div>
+  <!-- header start -->
+  <header class="header">
+     <div class="container">
+        <div class="header-main">
+           <div class="logo">
+              <a href="#">Logo</a>
+           </div>
+           <div class="open-nav-menu">
+              <span></span>
+           </div>
+           <div class="menu-overlay">
+           </div>
+           <!-- navigation menu start -->
+           <nav class="nav-menu">
+             <div class="close-nav-menu">
+                <img src="img/close.svg" alt="close">
+             </div>
+             <ul class="menu">
+                <li class="menu-item menu-item-has-children">
+                   <a href="#" data-toggle="sub-menu">Home <i class="plus"></i></a>
+                   <ul class="sub-menu">
+                       <li class="menu-item"><a href="#">Home 1</a></li>
+                       <li class="menu-item"><a href="#">Home 2</a></li>
+                       <li class="menu-item"><a href="#">Home 3</a></li>
+                       <li class="menu-item"><a href="#">Home 4</a></li>
+                   </ul>
+                </li>
+                <li class="menu-item">
+                   <a href="#">About</a>
+                </li>
+                <li class="menu-item">
+                   <a href="#">Services</a>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                   <a href="#" data-toggle="sub-menu">Pages <i class="plus"></i></a>
+                   <ul class="sub-menu">
+                       <li class="menu-item"><a href="#">page 1</a></li>
+                       <li class="menu-item"><a href="#">page 2</a></li>
+                       <li class="menu-item"><a href="#">page 3</a></li>
+                       <li class="menu-item"><a href="#">page 4</a></li>
+                   </ul>
+                </li>
+                <li class="menu-item">
+                   <a href="#">News</a>
+                </li>
+                <li class="menu-item">
+                   <a href="#">Contact</a>
+                </li>
+             </ul>
+           </nav>
+           <!-- navigation menu end -->
         </div>
-        <div class="slide swiper-slide">
-          <img src="http://unitedconstruction.com/wp-content/uploads/2019/07/1920-x-375-United-sign.jpg" alt="" class="image" />
-          <div class="image-data">
-            <span class="text">We really like what we do.</span>
-            <h2>
-              Coffee Beans with a <br />
-              Perfect Aroma
-            </h2>
-            <a href="#" class="button">About Us</a>
-          </div>
-        </div>
-        <div class="slide swiper-slide">
-          <img src="http://unitedconstruction.com/wp-content/uploads/2021/05/G1C3059-3-scaled.jpg" alt="" class="image" />
-          <div class="image-data">
-            <span class="text">Making Our coffee with lover.</span>
-            <h2>
-              Alluring and Fragrant <br />
-              Coffee Aroma
-            </h2>
-            <a href="#" class="button">About Us</a>
-          </div>
-        </div>
-      </div>
+     </div>
+  </header>
+  <!-- header end -->
 
-      <div class="swiper-button-next nav-btn"></div>
-      <div class="swiper-button-prev nav-btn"></div>
-      <div class="swiper-pagination"></div>
-    </section>
-
-    <!-- Swiper JS -->
-    <script src="JS/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-  </body>
+ <!-- home section start -->
+ <section class="home-section">
+ </section>
+ <!-- home section end -->
+ 
+<script src="js/script.js"></script>
+</body>
 </html>

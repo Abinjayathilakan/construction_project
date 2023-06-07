@@ -10,15 +10,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body{
+{% comment %} body{
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
-}
-*{
+} {% endcomment %}
+{% comment %} *{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
-}
+} {% endcomment %}
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -91,7 +91,7 @@ ul{
 }
 
 /*responsive*/
-@media(max-width: 767px){
+@media(max-width: 768px){
   .footer-col{
     width: 50%;
     margin-bottom: 30px;

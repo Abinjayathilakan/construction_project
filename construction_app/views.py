@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def navbar(request):
-    return render(request,'navbar.html')
+    return render(request,'base.html')
 
 def homepage(request):
     return render(request,'homepage2.html')
@@ -35,7 +35,7 @@ def ongoingprojects(request):
     return render(request,'ongoingprojects.html')
 
 def navbar2(request):
-    return render(request,'navbar2.html')
+    return render(request,'navbar3.html')
 
 def aboutus(request):
     return render(request,'aboutus.html')
