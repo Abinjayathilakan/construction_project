@@ -17,5 +17,5 @@ urlpatterns = [
     path('aboutus',views.aboutus,name='aboutus'),
     
     path('whychooseus',views.whychooseus,name='whychooseus'),
-    # path('navbar2',views.navbar2,name='aboutus'),
+    path('partners',views.partners,name='partners'),
 ]

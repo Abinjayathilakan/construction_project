@@ -1,4 +1,4 @@
-{% include "navbar3.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +25,7 @@
   
       section {
         position: relative;
-        z-index: 3;
+        
         padding-top: 50px;
         padding-bottom: 50px;
       }
@@ -61,9 +61,9 @@
         justify-content: space-between;
       }
   
-      .contact-info {
+      {% comment %} .contact-info {
         width: 50%;
-      }
+      } {% endcomment %}
   
       .contact-info-item {
         display: flex;
@@ -175,20 +175,129 @@
         .row {
           flex-direction: column;
         }
-  
-        .contact-info {
-          margin-bottom: 40px;
-          width: 100%;
-        }
+        .contact-info,
+  .contact-form {
+    width: 100%;
+  }
   
         .contact-form {
           width: 100%;
         }
       }
+      /* Navbar styles */
+      .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .navbar .logo {
+        font-weight: bold;
+        font-size: 20px;
+      }
+  
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+  
+      .navbar li {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+      .navbar ul.collapsed {
+        display: flex;
+      }
+  
+      .navbar li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+      }
+  
+      .navbar li a:hover {
+        background-color: #111;
+      }
+  
+      /* Toggle bar styles */
+      .toggle-bar {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+      }
+  
+      /* Responsive styles */
+      @media screen and (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+        }
+  
+        .navbar ul {
+          flex-direction: column;
+        }
+  
+        .navbar li {
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+  
+        .toggle-bar {
+          display: block;
+        }
+  
+        .navbar ul.collapsed {
+          display: none;
+        }
+
+      }
     </style>
 </head>
 <body>
-  
+  <div class="navbar">
+    <div class="logo">Logo</div>
+    <div class="toggle-bar">&#9776;</div>
+    <ul class="collapsed">
+        <li>
+            <a href="{% url 'homepage' %}" >Home</a>
+        </li>
+        <li>
+            <a href="{% url 'experties' %}">Experties</a>
+        </li>
+        <li>
+            <a href="{% url 'productbrand' %}">Product Brand</a>
+        </li>
+        <li>
+            <a href="{% url 'buyproducts' %}">Buy Product</a>
+        </li>
+        <li>
+            <a href="{% url 'gallery' %}">Gallery</a>
+        </li>
+        <li>
+            <a href="{% url 'projectupdates' %}">Gallery</a>
+        </li>
+        {% comment %} <li class="dropdown">
+            <a href="#" onclick="toggleDropdown(event)">Project Updates</a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url 'projectupdates' %}">IconicProjects</a></li>
+              <li><a href="{% url 'ongoingprojects' %}">OngoingProjects</a></li>
+            </ul>
+          </li> {% endcomment %}
+          
+        <li>
+            <a href="{% url 'career' %}">Career</a>
+        </li>
+        <li>
+            <a href="{% url 'contact' %}">Contact</a>
+        </li>
+    </ul>
+  </div>
+
   <section>
     
     <div class="section-header">
@@ -263,6 +372,14 @@
       </div>
     </div>
   </section>
-  
+  <script>
+    // JavaScript code to handle toggle functionality
+    const toggleBar = document.querySelector('.toggle-bar');
+    const navbarList = document.querySelector('.navbar ul');
+
+    toggleBar.addEventListener('click', function() {
+      navbarList.classList.toggle('collapsed');
+    });
+  </script>
 </body>
 </html>

@@ -26,10 +26,10 @@ def career(request):
     return render(request,'career.html')
 
 def contact(request):
-    return render(request,'contact.html')
+    return render(request,'contact2.html')
 
 def projectupdates(request):
-    return render(request,'projectupdates.html')
+    return render(request,'ongoingprojects.html')
 
 def ongoingprojects(request):
     return render(request,'ongoingprojects.html')
@@ -43,5 +43,5 @@ def aboutus(request):
 def whychooseus(request):
     return render(request,'whychooseus.html')
 
-# def navbar2(request):
-#     return render(request,'navbar2.html')
+def partners(request):
+    return render(request,'partners.html')
