@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
+def homepage(request):
+    return render(request,'homepage3.html')
+
 def navbar(request):
     return render(request,'base.html')
-
-def homepage(request):
-    return render(request,'homepage2.html')
 
 def experties(request):
     return render(request,'experties.html')

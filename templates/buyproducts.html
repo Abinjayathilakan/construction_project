@@ -32,13 +32,13 @@
     display: grid;
     place-content: center;
 } {% endcomment %}
-.container{
+{% comment %} .container{
     width: 80vw;
     height:80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
+} {% endcomment %}
 form{
     background:#fff;
     width:500px;
@@ -275,6 +275,9 @@ form button{
   .container{
 	max-width: 1170px;
 	margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .row{
 	display: flex;
@@ -286,7 +289,7 @@ ul{
 .footer{
 	background-color: #24262b;
     padding: 70px 0;
-    margin-top:35%;
+    margin-top:5%;
 }
 .footer-col{
    width: 25%;
@@ -379,7 +382,7 @@ ul{
                 <a href="{% url 'gallery' %}">Gallery</a>
             </li>
             <li>
-                <a href="{% url 'projectupdates' %}">Gallery</a>
+                <a href="{% url 'projectupdates' %}">Project Updates</a>
             </li>
             {% comment %} <li class="dropdown">
                 <a href="#" onclick="toggleDropdown(event)">Project Updates</a>
@@ -407,18 +410,19 @@ ul{
             <input type="text" placeholder="Search here..." />
             <button class="button">Search</button>
           </div>
+          <br><br>
         <div class="header">
             <h1>products</h1>
         </div>
-
+<br><br>
         <div class="products">
             
             <div class="product">
                 <div class="image">
-                    <img src="https://www.lntecc.com/media/5y3efwad/mumbai-international-airport-l-t-construction.jpg" style="height: 200px;width: 200px;" alt="">
+                    <img src="https://i.pinimg.com/236x/ae/46/0e/ae460e729075ae4ddc8f4932dd5862ca.jpg" style="height: 200px;width: 200px;" alt="">
                 </div>
                 <div class="namePrice">
-                    <h3>earphone</h3>
+                    <h3>Chair</h3>
                     <span>$ 15.99</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
@@ -436,10 +440,10 @@ ul{
 
             <div class="product">
                 <div class="image">
-                    <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/r/k/o/-original-imaghx9qtwbnhwvy.jpeg?q=70" style="height: 200px;width: 200px;" alt="">
+                    <img src="https://i.pinimg.com/564x/32/b1/32/32b132aecfabb7fce2e8c83db2596886.jpg" style="height: 200px;width: 200px;" alt="">
                 </div>
                 <div class="namePrice">
-                    <h3>iphone</h3>
+                    <h3>Beds</h3>
                     <span>$ 120.99</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -457,10 +461,10 @@ ul{
 
             <div class="product">
                 <div class="image">
-                    <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/computer/4/v/9/-original-imagp7pfeutcgxrn.jpeg?q=70" alt="">
+                    <img src="https://i.pinimg.com/564x/41/1b/4d/411b4d299b43ffa20ebb95e591c9a94b.jpg" style="height: 200px;width: 200px;" alt="">
                 </div>
                 <div class="namePrice">
-                    <h3>laptop</h3>
+                    <h3>Sofa</h3>
                     <span>$ 150.99</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -477,31 +481,10 @@ ul{
             </div>
             <div class="product">
                 <div class="image">
-                    <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/shirt/b/d/f/3xl-13-lstr-wine-vtexx-original-imagnzbummhkgr7p.jpeg?q=70" style="height: 200px;width: 200px;" alt="">
+                    <img src="https://i.pinimg.com/564x/29/94/03/29940381248d334ccf91f320b307afd7.jpg" style="height: 200px;width: 200px;" alt="">
                 </div>
                 <div class="namePrice">
-                    <h3>laptop</h3>
-                    <span>$ 150.99</span>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div><br>
-                <div class="bay">
-                    <button> buy now </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="image">
-                    <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/v/b/1/-original-imagjugf4zcsjmhv.jpeg?q=70" alt="">
-                </div>
-                <div class="namePrice">
-                    <h3>laptop</h3>
+                    <h3>Pipe</h3>
                     <span>$ 150.99</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -519,10 +502,31 @@ ul{
 
             <div class="product">
                 <div class="image">
-                    <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/watch/k/5/8/-original-imagz4wvcgz7yrny.jpeg?q=70"  style="height: 200px;width: 200px;" alt="">
+                    <img src="https://i.pinimg.com/564x/b5/1f/90/b51f90eb812eaf45a0ae80b2c180c7c7.jpg" style="height: 200px;width: 200px;" alt="">
                 </div>
                 <div class="namePrice">
-                    <h3>watch</h3>
+                    <h3>Granite</h3>
+                    <span>$ 150.99</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div><br>
+                <div class="bay">
+                    <button> buy now </button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="image">
+                    <img src="https://i.pinimg.com/736x/4d/8a/e5/4d8ae58899b49b1bce1d065295ed54a6.jpg"  style="height: 200px;width: 200px;" alt="">
+                </div>
+                <div class="namePrice">
+                    <h3>Tank</h3>
                     <span>$ 20.99</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -546,34 +550,34 @@ ul{
              <div class="footer-col">
                  <h4>Contact Us</h4>
                  <ul style="color: #F5EFE7">
-                   <li>
-                     <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                     <span>918 Mundur Street<br>&nbsp;&nbsp;
-                     Palakkad, PA 678592,<br>&nbsp;&nbsp;&nbsp;INDIA</span>
-                   </li>
-                   <li>
-                     <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                     <span>+0491 222451<br>&nbsp;&nbsp;&nbsp;
-                     +0491 223763</span>
-                   </li>
-                   <li>
-                     <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                     <span>stamfordbridge@gmail.com</span>
-                   </li>
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>1st Floor - Thapasya Building &nbsp;&nbsp; Infopark Kakkanad, Cochin<br>&nbsp;&nbsp;
+                        </span>
+                      </li>
+                      <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span>+91 9746632202<br>&nbsp;&nbsp;&nbsp;
+                        </span>
+                      </li>
+                      <li>
+                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <span>info@altostechnologies.in <info@altostechnologies.in></span>
+                      </li>
                  </ul>
                </div>
                
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Experties</a></li>
-                        <li><a href="#">Product Brand</a></li>
-                        <li><a href="#">Buy Products</a></li>
-                        <li><a href="#">Gallery</a></li>
-                     <li><a href="#">Project Updates</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'homepage' %}">Home</a></li>
+                        <li><a href="{% url 'experties' %}">Experties</a></li>
+                        <li><a href="{% url 'productbrand' %}">Product Brand</a></li>
+                        <li><a href="{% url 'buyproducts' %}">Buy Products</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="{% url 'ongoingprojects' %}">Project Updates</a></li>
+                        <li><a href="{% url 'career' %}">Career</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                         
                     </ul>
                 </div>

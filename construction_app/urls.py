@@ -1,8 +1,9 @@
 from django.urls import path,include
 from . import views
 urlpatterns = [
-    path('',views.navbar,name='navbar'),
-    path('homepage',views.homepage,name='homepage'),
+    
+    path('',views.homepage,name='homepage'),
+    path('navbar',views.navbar,name='navbar'),
     path('experties',views.experties,name='experties'),
     path('productbrand',views.productbrand,name='productbrand'),
     path('footer',views.footer,name='footer'),
